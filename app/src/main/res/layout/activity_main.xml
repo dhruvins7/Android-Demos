@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="main"
+            type="com.example.user.demoproject.MainActivity" />
+        <!--<variable-->
+        <!--name="model"-->
+        <!--type="com.example.user.demoproject.model_classes.LoginModel"/>-->
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.user.demoproject.MainActivity">
+
+
+        <TextView
+            android:id="@+id/textView_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_todo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->main.submit()}"
+            android:text="add new task" />
+
+
+        <Button
+            android:id="@+id/btn_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->main.launch()}"
+            android:text="List Activity" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->main.logout()}"
+            android:text="Sign Out" />
+    </LinearLayout>
+</layout>

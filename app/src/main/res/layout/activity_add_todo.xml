@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="addtodo"
+            type="com.example.user.demoproject.AddTodoActivity" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/spinner_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+        <EditText
+            android:id="@+id/edit_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_add_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add task"
+            android:onClick="@{()->addtodo.submit()}"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add new list"
+            android:onClick="@{()->addtodo.listcall()}"
+            android:id="@+id/btn_list"/>
+
+    </LinearLayout>
+</layout>

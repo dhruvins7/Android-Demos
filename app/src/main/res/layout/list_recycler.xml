@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="list"
+            type="com.example.user.demoproject.model_classes.ListModel" />
+
+        <variable
+            name="data"
+            type="com.example.user.demoproject.ListActivity" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@{list.list}"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</layout>
